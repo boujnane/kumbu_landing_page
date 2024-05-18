@@ -23,9 +23,9 @@ interface SociaNetworkslProps {
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: "https://i.pravatar.cc/150?img=35",
-    name: "Emma Smith",
-    position: "Product Manager",
+    imageUrl: "src/assets/pa.jpeg",
+    name: "Paul-Alexis Dray",
+    position: "CEO",
     socialNetworks: [
       { name: "Linkedin", url: "http://linkedin.com" },
       {
@@ -39,9 +39,9 @@ const teamList: TeamProps[] = [
     ],
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=60",
-    name: "John Doe",
-    position: "Tech Lead",
+    imageUrl: "src/assets/ady.jpeg",
+    name: "Ady Boujnane",
+    position: "COO",
     socialNetworks: [
       { name: "Linkedin", url: "http://linkedin.com" },
       {
@@ -55,9 +55,9 @@ const teamList: TeamProps[] = [
     ],
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=36",
-    name: "Ashley Ross",
-    position: "Frontend Developer",
+    imageUrl: "src/assets/armel.jpeg",
+    name: "Armel Fotsoh",
+    position: "Lead Engineer",
     socialNetworks: [
       { name: "Linkedin", url: "http://linkedin.com" },
 
@@ -68,9 +68,9 @@ const teamList: TeamProps[] = [
     ],
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=17",
-    name: "Bruce Rogers",
-    position: "Backend Developer",
+    imageUrl: "src/assets/JF.jpeg",
+    name: "Jean-François Thaï",
+    position: "CTO",
     socialNetworks: [
       { name: "Linkedin", url: "http://linkedin.com" },
       {
@@ -108,8 +108,7 @@ export const Team = () => {
       </h2>
 
       <p className="mt-4 mb-10 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
+      This is our close-knit team !
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">

@@ -15,6 +15,17 @@ html {
   filter: blur(150px);
   animation: shadow-slide infinite 4s linear alternate;
 }
+.shadow1 {
+  position: absolute;
+  background: #949AF6;
+  border-radius: 24px;
+  rotate: 35deg;
+  width: 260px;
+  top: 500px;
+  height: 400px;
+  filter: blur(150px);
+  animation: shadow-slide-1 infinite 4s linear alternate;
+}
 
 @keyframes shadow-slide {
   from {
@@ -27,9 +38,26 @@ html {
   }
 }
 
+@keyframes shadow-slide-1 {
+  from {
+    background: #949AF6; 
+    right: 460px;
+    top: 200px;
+  }
+  to {
+    background: #474A78; 
+    right: 160px;
+    
+  }
+}
+
 @media (max-width: 1024px) {
   .shadow {
     top: 70px;
+  }
+
+  .shadow1 {
+    top: 50px; /* Ajustez la position pour correspondre à .shadow */
   }
 
   @keyframes shadow-slide {
@@ -39,6 +67,17 @@ html {
     }
     to {
       background: hsl(var(--primary) / 50%);
+      right: 160px;
+    }
+  }
+
+  @keyframes shadow-slide-1 {
+    from {
+      background: #949AF6; /* Couleur violette */
+      right: 460px;
+    }
+    to {
+      background: #474A78; /* Couleur différente pour le shadow1 */
       right: 160px;
     }
   }
@@ -52,6 +91,13 @@ html {
     filter: blur(60px);
   }
 
+  .shadow1 {
+    top: 50px;
+    width: 100px;
+    height: 350px;
+    filter: blur(60px);
+  }
+
   @keyframes shadow-slide {
     from {
       background: hsl(var(--primary) / 20%);
@@ -60,6 +106,17 @@ html {
     to {
       background: hsl(var(--primary) / 30%);
       right: 100px;
+    }
+  }
+
+  @keyframes shadow-slide-1 {
+    from {
+      background: #949AF6; /* Couleur violette */
+      right: 220px;
+    }
+    to {
+      background: #474A78; /* Couleur différente pour le shadow1 */
+      right: 80px;
     }
   }
 }

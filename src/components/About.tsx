@@ -1,5 +1,4 @@
 import { Statistics } from "./Statistics";
-import pilot from "../assets/pilot.png";
 
 export const About = () => {
   return (
@@ -10,7 +9,7 @@ export const About = () => {
       <div className="bg-muted/50 border rounded-lg py-12">
         <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12">
           <img
-            src={pilot}
+            src={"src/assets/LogoBubo.svg"}
             alt=""
             className="w-[300px] object-contain rounded-lg"
           />
@@ -23,11 +22,9 @@ export const About = () => {
                 Company
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit.
+              "Since the dawn of time, the long-eared owl has flown silently, wisely and precisely towards its prey."
+
+              Chance is fascinating; deciphering it is a notably arduous but hugely profitable task. Founded in 2017 by a team with pure tech DNA, Bubo has been working on the issue, via state-of-the-art AI publications and dedicated products
               </p>
             </div>
 

@@ -1,3 +1,4 @@
+import { useTheme } from "./theme-provider";
 import { Badge } from "./ui/badge";
 import {
   Card,
@@ -6,50 +7,52 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import image from "../assets/growth.png";
-import image3 from "../assets/reflecting.png";
-import image4 from "../assets/looking-ahead.png";
 
 interface FeatureProps {
   title: string;
   description: string;
   image: string;
+  imageDark: string;
 }
 
 const features: FeatureProps[] = [
   {
-    title: "Responsive Design",
+    title: "Monitoring - Dashboard",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image4,
+      "Our solution includes platform activity monitoring, enabling fine-tuned management of system performance and utilization. The dashboard provides a clear overview of current activities, and relevant statistics, enabling users to make informed decisions and detect potential problems quickly.",
+    image: "src/assets/dashboard.png",
+    imageDark: "src/assets/dashboard_black.png",
   },
   {
-    title: "Intuitive user interface",
+    title: "Personnalization - Customization",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image3,
+      "Our solution offers settings and customization to meet the specific needs of each user. With the ability to customize search preferences, metadata filters and the user interface, each user can create a tailor-made environment that maximizes efficiency and satisfaction.",
+    image: "src/assets/customization.png",
+    imageDark: "src/assets/customization-dark.png",
   },
   {
-    title: "AI-Powered insights",
+    title: "Advanced Search",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image,
+      "The integration of lexical search and semantic dictionary facilitates rapid localization of information, while the use of regular expressions enables more flexible searches. Customized metadata allows results to be filtered according to user needs.",
+    image: "src/assets/loupe.png",
+    imageDark: "src/assets/loupe_dark.png",
   },
 ];
 
 const featureList: string[] = [
   "Dark/Light theme",
-  "Reviews",
-  "Features",
-  "Pricing",
-  "Contact form",
-  "Our team",
-  "Responsive design",
-  "Newsletter",
-  "Minimalist",
+  "Chat AI",
+  "Semantic Search",
+  "Regexp Search",
+  "Manage Files",
+  "Security",
+  "Latest AI technology",
+  "High customizaton",
+  "User-Friendly Interface",
 ];
 
 export const Features = () => {
+  const { theme } = useTheme();
   return (
     <section
       id="features"
@@ -76,23 +79,23 @@ export const Features = () => {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map(({ title, description, image }: FeatureProps) => (
-          <Card key={title}>
-            <CardHeader>
-              <CardTitle>{title}</CardTitle>
-            </CardHeader>
+      {features.map(({ title, description, image, imageDark }: FeatureProps) => (
+        <Card key={title}>
+          <CardHeader>
+            <CardTitle>{title}</CardTitle>
+          </CardHeader>
 
-            <CardContent>{description}</CardContent>
+          <CardContent className="mb-4">{description}</CardContent>
 
-            <CardFooter>
-              <img
-                src={image}
-                alt="About feature"
-                className="w-[200px] lg:w-[300px] mx-auto"
-              />
-            </CardFooter>
-          </Card>
-        ))}
+          <CardFooter>
+            <img
+              src={theme === "light" ? image : imageDark}
+              alt="About feature"
+              className="w-[200px] lg:w-[400px] mx-auto"
+            />
+          </CardFooter>
+        </Card>
+      ))}
       </div>
     </section>
   );

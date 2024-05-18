@@ -17,9 +17,7 @@ export const Cta = () => {
             In One Interface
           </h2>
           <p className="text-muted-foreground text-xl mt-4 mb-8 lg:mb-0">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
-            beatae. Ipsa tempore ipsum iste quibusdam illum ducimus eos. Quasi,
-            sed!
+          Kumbu seamlessly integrates all your ideas and concepts into an intuitive interface, streamlining collaboration and innovation within your team.
           </p>
         </div>
 

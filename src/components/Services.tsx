@@ -1,6 +1,6 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
-import cubeLeg from "../assets/cube-leg.png";
+import { MedalIcon, Sewing, IALogo } from "./Icons";
+import { useTheme } from "./theme-provider";
 
 interface ServiceProps {
   title: string;
@@ -10,26 +10,29 @@ interface ServiceProps {
 
 const serviceList: ServiceProps[] = [
   {
-    title: "Code Collaboration",
+    title: "Tailor-made App",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <ChartIcon />,
+      "Bubo is able to develop a tailor-made application, taking business needs into consideration, and opting for the best web technologies.",
+    icon: <Sewing />,
   },
   {
-    title: "Project Management",
+    title: "Ai Research",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <WalletIcon />,
+      "Bubo is able to advise and manage AI projects, thanks to its expertise and numerous published articles, mainly in NLP and ComputerVision.",
+    icon: <IALogo />,
   },
   {
-    title: "Task Automation",
+    title: "Temporary expertise assignment",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <MagnifierIcon />,
+      "Bubo provides expertise in data and web architecture, concerning AI and big data.",
+    icon: <MedalIcon />,
   },
 ];
 
 export const Services = () => {
+  const { theme } = useTheme();
+  const a_great_horned_owl_light = "src/assets/a_great_horned_owl-light.png";
+  const a_great_horned_owl_dark = "src/assets/a_great_horned_owl.png"
   return (
     <section className="container py-24 sm:py-32">
       <div className="grid lg:grid-cols-[1fr,1fr] gap-8 place-items-center">
@@ -42,8 +45,7 @@ export const Services = () => {
           </h2>
 
           <p className="text-muted-foreground text-xl mt-4 mb-8 ">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-            dolor.
+          Bubo is committed to providing customer-centric services, putting our customers' needs and objectives at the heart of everything we do. Through our diversified offerings and tailored solutions, we strive to create exceptional and lasting experiences for each and every one of our customers.
           </p>
 
           <div className="flex flex-col gap-8">
@@ -66,8 +68,8 @@ export const Services = () => {
         </div>
 
         <img
-          src={cubeLeg}
-          className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
+          src={theme === "dark" ? a_great_horned_owl_light : a_great_horned_owl_dark}
+          className="mr-10 w-[300px] md:w-[500px] lg:w-[600px] object-contain mx-auto"
           alt="About services"
         />
       </div>

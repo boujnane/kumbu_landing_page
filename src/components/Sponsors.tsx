@@ -1,55 +1,64 @@
-import { Radar } from "lucide-react";
+import { useTheme } from "./theme-provider";
 
-interface SponsorProps {
-  icon: JSX.Element;
+type SponsorProps = {
   name: string;
-}
+  imageSrcLight: string;
+  imageSrcDark: string;
+};
 
 const sponsors: SponsorProps[] = [
   {
-    icon: <Radar size={34} />,
-    name: "Sponsor 1",
+    name: "Atradius",
+    imageSrcLight: "src/assets/partners/atradius.svg",
+    imageSrcDark: "src/assets/partners/atradius.svg",
   },
   {
-    icon: <Radar size={34} />,
-    name: "Sponsor 2",
+    name: "Descartes & Mauss",
+    imageSrcLight: "src/assets/partners/D_M_light.png",
+    imageSrcDark: "src/assets/partners/D_M.png",
   },
   {
-    icon: <Radar size={34} />,
-    name: "Sponsor 3",
+    name: "Batisseurs",
+    imageSrcLight: "src/assets/partners/logo-batisseurs.png",
+    imageSrcDark: "src/assets/partners/logo-batisseurs.png",
   },
   {
-    icon: <Radar size={34} />,
-    name: "Sponsor 4",
+    name: "Gioza",
+    imageSrcLight: "src/assets/partners/gioza_logo.png",
+    imageSrcDark: "src/assets/partners/gioza_logo.png",
   },
   {
-    icon: <Radar size={34} />,
-    name: "Sponsor 5",
+    name: "Yxir",
+    imageSrcLight: "src/assets/partners/yxir.png",
+    imageSrcDark: "src/assets/partners/yxir.png",
   },
   {
-    icon: <Radar size={34} />,
-    name: "Sponsor 6",
-  },
+    name: "EtsIzySoft",
+    imageSrcLight: "src/assets/partners/etsizysoft_logo.png",
+    imageSrcDark: "src/assets/partners/etsizysoft_logo_dark.png",
+  }
+  
 ];
 
 export const Sponsors = () => {
+  const { theme } = useTheme();
+
   return (
-    <section
-      id="sponsors"
-      className="container pt-24 sm:py-32"
-    >
+    <section id="sponsors" className="container pt-24 sm:py-32">
       <h2 className="text-center text-md lg:text-xl font-bold mb-8 text-primary">
-        Investors and founders
+        Clients & Partners
       </h2>
 
       <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
-        {sponsors.map(({ icon, name }: SponsorProps) => (
-          <div
-            key={name}
-            className="flex items-center gap-1 text-muted-foreground/60"
-          >
-            <span>{icon}</span>
-            <h3 className="text-xl  font-bold">{name}</h3>
+        {sponsors.map(({ name, imageSrcLight, imageSrcDark }) => (
+          <div key={name} className="flex items-center gap-1 text-muted-foreground/60">
+            <div className="w-96 h-48">
+              <img
+                src={theme === "dark" ? imageSrcDark : imageSrcLight}
+                alt={name}
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
         ))}
       </div>

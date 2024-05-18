@@ -69,9 +69,9 @@ export const Testimonials = () => {
         Discover Why
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           {" "}
-          People Love{" "}
+          People {" "}
         </span>
-        This Landing Page
+        Trust Us
       </h2>
 
       <p className="text-xl text-muted-foreground pt-4 pb-8">

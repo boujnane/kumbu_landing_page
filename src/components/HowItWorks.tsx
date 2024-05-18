@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { MedalIcon, MapIcon, PlaneIcon, GiftIcon } from "../components/Icons";
+import { FileIcon, SearchIcon, ManageTeamIcon, ChatIcon } from "../components/Icons";
 
 interface FeatureProps {
   icon: JSX.Element;
@@ -9,28 +9,28 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    icon: <MedalIcon />,
-    title: "Accessibility",
+    icon: <FileIcon />,
+    title: "Upload your docs",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Simply create an account, drag and drop your files, and off you go !",
   },
   {
-    icon: <MapIcon />,
-    title: "Community",
+    icon: <ManageTeamIcon />,
+    title: "Manage Team",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Use Kumbu's team management tools to define access authorizations and guarantee data confidentiality.",
   },
   {
-    icon: <PlaneIcon />,
-    title: "Scalability",
+    icon: <SearchIcon />,
+    title: "Search in your docs",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Explore Bubo's advanced search features to quickly find specific information in your documents, with 3 levels of granularity.",
   },
   {
-    icon: <GiftIcon />,
-    title: "Gamification",
+    icon: <ChatIcon />,
+    title: "Chat with your docs",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Engage in document-related conversations with Kumbu chat, which lets you get precise answers in natural language about your own documents.",
   },
 ];
 
@@ -42,7 +42,7 @@ export const HowItWorks = () => {
     >
       <h2 className="text-3xl md:text-4xl font-bold ">
         How It{" "}
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+        <span className="inline bg-gradient-to-r from-[#949af6]  to-[#FF5400]  text-transparent bg-clip-text">
           Works{" "}
         </span>
         Step-by-Step Guide
