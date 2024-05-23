@@ -1,0 +1,64 @@
+stages:
+  - build_dev_image
+  - deploy_dev
+
+.docker-build:
+  tags:
+    - Izysearch
+  image: docker:git
+  services:
+    - docker:dind
+  variables:
+    ENV_VARIABLES: ''
+    GCP_KEY: ''
+
+  before_script:
+    - cat $GCP_KEY | docker login -u _json_key --password-stdin $GCP_REGISTRY_HOST
+    - cat $ENV_VARIABLES > .env
+    - export $(grep -v '^#' .env | xargs -d '\n') 
+  script:
+    - docker build --tag "$IMAGE_NAME:$IMAGE_VERSION" . 
+    - docker push $IMAGE_NAME:$IMAGE_VERSION
+
+.run-container:
+  tags:
+    - Izysearch
+  image: google/cloud-sdk:alpine
+  variables:
+    GCP_KEY: ''
+    ENV_VARIABLES: ''
+    YAML_FILE: ''
+
+  before_script:
+    - cat $GCP_KEY > key.json
+    - cat $ENV_VARIABLES > .env
+    - export $(grep -v '^#' .env | xargs -d '\n')
+  script:
+    - gcloud auth activate-service-account $GCP_SERVICE_ACCOUNT --key-file=key.json
+    - gcloud config set project $GCP_PROJECT
+    - gcloud config set container/cluster $GCP_CLUSTER
+    - gcloud container clusters get-credentials $GCP_CLUSTER --zone $GCP_CLUSTER_ZONE --project $GCP_PROJECT
+    - cat deploy/${YAML_FILE} | envsubst | kubectl apply -f -
+
+## IN DEV ENV
+build:dev-image:
+  extends: .docker-build
+  stage: build_dev_image
+  variables:
+    ENV_VARIABLES: $DEV_ENV
+    GCP_KEY: $DEV_CLUSTER_KEY
+  only:
+    refs:
+      - development
+
+deploy:dev:
+  extends: .run-container
+  stage: deploy_dev
+  variables:
+    ENV_VARIABLES: $DEV_ENV
+    GCP_KEY: $DEV_CLUSTER_KEY
+    YAML_FILE: app.yaml
+  only:
+    refs:
+      - development
+  when: manual
