@@ -131,7 +131,7 @@ export const Team = () => {
               </CardHeader>
 
               <CardContent className="text-center pb-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p></p>
               </CardContent>
 
               <CardFooter>

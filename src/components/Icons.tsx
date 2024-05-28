@@ -4,12 +4,23 @@ export const LogoIcon = () => {
     src={"src/assets/LogoBubo.svg"}
     alt="Logo"
     className="logo-icon"
-    width="32"
-    height="32"
+    width="28"
+    height="28"
   />
   );
 };
 
+export const KumbuIcon = () => {
+  return (
+    <img
+    src={"src/assets/logo_kumbu3-removebg-preview.png"}
+    alt="Logo"
+    className="logo-icon"
+    width="42"
+    height="42"
+  />
+  );
+};
 
 export const FileIcon = () => {
   return (

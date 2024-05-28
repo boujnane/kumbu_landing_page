@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -16,6 +17,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
+import { KumbuIcon } from "./Icons";
 import { LogoIcon } from "./Icons";
 
 interface RouteProps {
@@ -25,38 +27,40 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#features",
+    href: "/#features",
     label: "Features",
   },
   {
-    href: "#testimonials",
-    label: "Testimonials",
-  },
-  {
-    href: "#pricing",
+    href: "/#pricing",
     label: "Pricing",
   },
   {
-    href: "#faq",
+    href: "/#faq",
     label: "FAQ",
+  },
+  {
+    href: "/about",
+    label: "About",
   },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const location = useLocation();
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
-          <a
-            rel="noreferrer noopener"
-            href="/"
-            className="ml-2 font-bold text-xl flex items-center"
-          >
-            <LogoIcon />
-            <span className="ml-2">Bubo</span>
-          </a>
+            <Link
+              to="/"
+              className="ml-2 font-bold text-xl flex items-center"
+            >
+              {location.pathname === "/about" ? <LogoIcon /> : <KumbuIcon />}
+              <span className="ml-2">
+              {location.pathname === "/about" ? "Bubo" : "Kumbu"}
+              </span>
+            </Link>
           </NavigationMenuItem>
 
           {/* mobile */}
@@ -84,15 +88,14 @@ export const Navbar = () => {
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
                   {routeList.map(({ href, label }: RouteProps) => (
-                    <a
-                      rel="noreferrer noopener"
+                    <Link
                       key={label}
-                      href={href}
+                      to={href}
                       onClick={() => setIsOpen(false)}
                       className={buttonVariants({ variant: "ghost" })}
                     >
                       {label}
-                    </a>
+                    </Link>
                   ))}
                   <a
                     rel="noreferrer noopener"
@@ -113,16 +116,15 @@ export const Navbar = () => {
           {/* desktop */}
           <nav className="hidden md:flex gap-2">
             {routeList.map((route: RouteProps, i) => (
-              <a
-                rel="noreferrer noopener"
-                href={route.href}
+              <Link
+                to={route.href}
                 key={i}
                 className={`text-[17px] ${buttonVariants({
                   variant: "ghost",
                 })}`}
               >
                 {route.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
