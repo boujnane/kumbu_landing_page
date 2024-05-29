@@ -14,7 +14,7 @@ interface FAQProps {
 const FAQList: FAQProps[] = [
   {
     question: "Is this app free?",
-    answer: "Yes. It is a free app but we have differents offers",
+    answer: "Yes, Kumbu offers a free plan for personal use with limited functionality, but organizations and advanced features require a paid subscription: we have different offers in this sense.",
     value: "item-1",
   },
   {

@@ -16,10 +16,9 @@ export const About = () => {
           <div className="bg-green-0 flex flex-col justify-between">
             <div className="pb-6">
               <h2 className="text-3xl md:text-4xl font-bold">
-                <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-                  About{" "}
-                </span>
-                Company
+                  The {" "}
+                <span className="inline bg-gradient-to-r from-[#FFD800]  to-[#FF5400] text-transparent bg-clip-text">Bubo</span>
+                {" "} Company
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
               <i>"Since the dawn of time, the long-eared owl has flown silently, wisely and precisely towards its prey."</i><br/> 
