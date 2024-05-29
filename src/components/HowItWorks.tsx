@@ -24,7 +24,7 @@ const features: FeatureProps[] = [
     icon: <SearchIcon />,
     title: "Search in your docs",
     description:
-      "Explore Bubo's advanced search features to quickly find specific information in your documents, with 3 levels of granularity.",
+      "Explore Kumbu's advanced search features to quickly find specific information in your documents, with 3 levels of granularity.",
   },
   {
     icon: <ChatIcon />,

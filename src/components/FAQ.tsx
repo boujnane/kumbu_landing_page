@@ -20,19 +20,19 @@ const FAQList: FAQProps[] = [
   {
     question: "How does it work ?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "Kumbu is a web platform dedicated to centralizing corporate knowledge and documents. These documents can be digital or paper scans. When you upload documents, they are stored on a secure cloud, and our software solution makes it easy to access them: directly in folders, via a search bar or via a dedicated chat.",
     value: "item-2",
   },
   {
     question:
       "Why should I care ?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis necessitatibus maxime quis ipsa vitae cumque quo?",
+      "Corporate knowledge is the crucial raw material for operating in the 21st century. Having a functional and efficient information management system sets you apart in the ecosystem and among your competitors.",
     value: "item-3",
   },
   {
     question: "What data do you collect ?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    answer: "We don't have direct access to our customers' documents, which are stored in separate partitions. We only collect platform usage data in order to improve the user experience.",
     value: "item-4",
   }
 ];
@@ -73,7 +73,7 @@ export const FAQ = () => {
         Still have questions?{" "}
         <a
           rel="noreferrer noopener"
-          href="#"
+          href="mailto:contact@kumbu.ai"
           className="text-primary transition-all border-primary hover:border-b-2"
         >
           Contact us
