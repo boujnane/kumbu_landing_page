@@ -1,7 +1,7 @@
 export const LogoIcon = () => {
   return (
     <img
-    src={"src/assets/LogoBubo.svg"}
+    src={"/assets/LogoBubo.svg"}
     alt="Logo"
     className="logo-icon"
     width="28"
@@ -13,7 +13,7 @@ export const LogoIcon = () => {
 export const KumbuIcon = () => {
   return (
     <img
-    src={"src/assets/kumbu_logo.png"}
+    src={"/assets/kumbu_logo.png"}
     alt="Logo"
     className="logo-icon"
     width="54"
@@ -25,7 +25,7 @@ export const KumbuIcon = () => {
 export const FileIcon = () => {
   return (
     <img
-    src={"src/assets/upload_icon.svg"}
+    src={"/assets/upload_icon.svg"}
     alt="Logo"
     className="logo-icon"
     width="76"
@@ -37,7 +37,7 @@ export const FileIcon = () => {
 export const SearchIcon = () => {
   return (
     <img
-    src={"src/assets/searchIcon.svg"}
+    src={"/assets/searchIcon.svg"}
     alt="Logo"
     className="logo-icon"
     width="76"
@@ -49,7 +49,7 @@ export const SearchIcon = () => {
 export const ManageTeamIcon = () => {
   return (
     <img
-    src={"src/assets/manageTeamIcon.svg"}
+    src={"/assets/manageTeamIcon.svg"}
     alt="Logo"
     className="logo-icon"
     width="76"
@@ -61,7 +61,7 @@ export const ManageTeamIcon = () => {
 export const ChatIcon = () => {
   return (
     <img
-    src={"src/assets/chatIcon.svg"}
+    src={"/assets/chatIcon.svg"}
     alt="Logo"
     className="logo-icon"
     width="76"
@@ -73,7 +73,7 @@ export const ChatIcon = () => {
 export const IALogo = () => {
   return (
     <img
-    src={"src/assets/ai.svg"}
+    src={"/assets/ai.svg"}
     alt="Logo"
     className="logo-icon"
     width="96"
@@ -86,7 +86,7 @@ export const IALogo = () => {
 export const Sewing = () => {
   return (
     <img
-    src={"src/assets/sewing.svg"}
+    src={"/assets/sewing.svg"}
     alt="Logo"
     className="logo-icon"
     width="96"

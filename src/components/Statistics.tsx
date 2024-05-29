@@ -15,7 +15,7 @@ export const Statistics = () => {
     },
     {
       quantity: "+ 10M",
-      description: "Documents",
+      description: "Processed documents",
     },
     {
       quantity: "3",

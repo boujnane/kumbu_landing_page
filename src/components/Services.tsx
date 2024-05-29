@@ -31,8 +31,8 @@ const serviceList: ServiceProps[] = [
 
 export const Services = () => {
   const { theme } = useTheme();
-  const a_great_horned_owl_light = "src/assets/a_great_horned_owl-light.png";
-  const a_great_horned_owl_dark = "src/assets/a_great_horned_owl.png"
+  const a_great_horned_owl_light = "/assets/a_great_horned_owl-light.png";
+  const a_great_horned_owl_dark = "/assets/a_great_horned_owl.png"
   return (
     <section className="container py-24 sm:py-32">
       <div className="grid lg:grid-cols-[1fr,1fr] gap-8 place-items-center">

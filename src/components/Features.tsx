@@ -20,22 +20,22 @@ const features: FeatureProps[] = [
     title: "Monitoring - Dashboard",
     description:
       "Our solution includes platform activity monitoring, enabling fine-tuned management of system performance and utilization. The dashboard provides a clear overview of current activities, and relevant statistics, enabling users to make informed decisions and detect potential problems quickly.",
-    image: "src/assets/dashboard.png",
-    imageDark: "src/assets/dashboard_black.png",
+    image: "/assets/dashboard.png",
+    imageDark: "/assets/dashboard_black.png",
   },
   {
     title: "Personnalization - Customization",
     description:
       "Our solution offers settings and customization to meet the specific needs of each user. With the ability to customize search preferences, metadata filters and the user interface, each user can create a tailor-made environment that maximizes efficiency and satisfaction.",
-    image: "src/assets/customization.png",
-    imageDark: "src/assets/customization-dark.png",
+    image: "/assets/customization.png",
+    imageDark: "/assets/customization-dark.png",
   },
   {
     title: "Advanced Search",
     description:
       "The integration of lexical search and semantic dictionary facilitates rapid localization of information, while the use of regular expressions enables more flexible searches. Customized metadata allows results to be filtered according to user needs.",
-    image: "src/assets/loupe.png",
-    imageDark: "src/assets/loupe_dark.png",
+    image: "/assets/loupe.png",
+    imageDark: "/assets/loupe_dark.png",
   },
 ];
 

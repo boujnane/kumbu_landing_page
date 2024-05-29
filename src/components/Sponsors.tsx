@@ -9,33 +9,33 @@ type SponsorProps = {
 const sponsors: SponsorProps[] = [
   {
     name: "Atradius",
-    imageSrcLight: "src/assets/partners/atradius.svg",
-    imageSrcDark: "src/assets/partners/atradius.svg",
+    imageSrcLight: "/assets/partners/atradius.svg",
+    imageSrcDark: "/assets/partners/atradius.svg",
   },
   {
     name: "Descartes & Mauss",
-    imageSrcLight: "src/assets/partners/D_M_light.png",
-    imageSrcDark: "src/assets/partners/D_M.png",
+    imageSrcLight: "/assets/partners/D_M_light.png",
+    imageSrcDark: "/assets/partners/D_M.png",
   },
   {
     name: "Batisseurs",
-    imageSrcLight: "src/assets/partners/logo-batisseurs.png",
-    imageSrcDark: "src/assets/partners/logo-batisseurs.png",
+    imageSrcLight: "/assets/partners/logo-batisseurs.png",
+    imageSrcDark: "/assets/partners/logo-batisseurs.png",
   },
   {
     name: "Gioza",
-    imageSrcLight: "src/assets/partners/gioza_logo.png",
-    imageSrcDark: "src/assets/partners/gioza_logo.png",
+    imageSrcLight: "/assets/partners/gioza_logo.png",
+    imageSrcDark: "/assets/partners/gioza_logo.png",
   },
   {
     name: "Yxir",
-    imageSrcLight: "src/assets/partners/yxir.png",
-    imageSrcDark: "src/assets/partners/yxir.png",
+    imageSrcLight: "/assets/partners/yxir.png",
+    imageSrcDark: "/assets/partners/yxir.png",
   },
   {
     name: "EtsIzySoft",
-    imageSrcLight: "src/assets/partners/etsizysoft_logo.png",
-    imageSrcDark: "src/assets/partners/etsizysoft_logo_dark.png",
+    imageSrcLight: "/assets/partners/etsizysoft_logo.png",
+    imageSrcDark: "/assets/partners/etsizysoft_logo_dark.png",
   }
   
 ];

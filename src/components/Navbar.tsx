@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -18,8 +18,6 @@ import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import { KumbuIcon } from "./Icons";
-import { LogoIcon } from "./Icons";
-
 interface RouteProps {
   href: string;
   label: string;
@@ -42,7 +40,6 @@ const routeList: RouteProps[] = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const location = useLocation();
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
@@ -52,9 +49,9 @@ export const Navbar = () => {
               to="/"
               className="ml-2 font-bold text-xl flex items-center"
             >
-              {location.pathname === "/about" ? <LogoIcon /> : <KumbuIcon />}
+              <KumbuIcon />
               <span className="ml-2">
-              {location.pathname === "/about" ? "Bubo" : "Kumbu"}
+              Kumbu
               </span>
             </Link>
           </NavigationMenuItem>
@@ -95,7 +92,7 @@ export const Navbar = () => {
                   ))}
                   <a
                     rel="noreferrer noopener"
-                    href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+                    href="https://github.com"
                     target="_blank"
                     className={`w-[110px] border ${buttonVariants({
                       variant: "secondary",

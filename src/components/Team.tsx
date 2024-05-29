@@ -24,7 +24,7 @@ interface SociaNetworkslProps {
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: "src/assets/pa.jpeg",
+    imageUrl: "/assets/pa.jpeg",
     name: "Paul-Alexis Dray",
     position: "CEO",
     bio: "Research engineer and developer in AI / Deep Learning and more specifically in NLP on generative models (GenAI)",
@@ -41,7 +41,7 @@ const teamList: TeamProps[] = [
     ],
   },
   {
-    imageUrl: "src/assets/ady.jpeg",
+    imageUrl: "/assets/ady.jpeg",
     name: "Ady Boujnane",
     position: "COO",
     bio: "Software development engineer. He oversees day-to-day operations and implements strategy to keep the company running smoothly.",
@@ -58,7 +58,7 @@ const teamList: TeamProps[] = [
     ],
   },
   {
-    imageUrl: "src/assets/armel.jpeg",
+    imageUrl: "/assets/armel.jpeg",
     name: "Armel Fotsoh",
     position: "Lead Engineer",
     bio: "PhD is an expert in software architecture and design, specializing in platforms integrating artificial intelligence.",
@@ -72,7 +72,7 @@ const teamList: TeamProps[] = [
     ],
   },
   {
-    imageUrl: "src/assets/JF.jpeg",
+    imageUrl: "/assets/JF.jpeg",
     name: "Jean-François Thaï",
     position: "CTO",
     bio: "Information systems specialist with in-depth expertise in web dev and vision-oriented Deep Learning (Computer Vision).",

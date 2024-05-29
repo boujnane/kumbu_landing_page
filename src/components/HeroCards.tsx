@@ -7,11 +7,11 @@ import Autoplay from "embla-carousel-autoplay"
 
 export const HeroCards = () => {
   const images = [
-    "src/assets/Desktop - Dashboard.png",
-    "src/assets/Desktop - Settings Semantic rules 2.png",
-    "src/assets/Desktop - Search results - List Vue - More Details - Selected Item.png",
-    "src/assets/Desktop - Chat.png",
-    "src/assets/Desktop - Login Page - SaaS.png"
+    "/assets/Desktop - Dashboard.png",
+    "/assets/Desktop - Settings Semantic rules 2.png",
+    "/assets/Desktop - Search results - List Vue - More Details - Selected Item.png",
+    "/assets/Desktop - Chat.png",
+    "/assets/Desktop - Login Page - SaaS.png"
   ];
 
   return (
