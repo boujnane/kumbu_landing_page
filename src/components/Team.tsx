@@ -13,6 +13,7 @@ interface TeamProps {
   imageUrl: string;
   name: string;
   position: string;
+  bio: string;
   socialNetworks: SociaNetworkslProps[];
 }
 
@@ -26,6 +27,7 @@ const teamList: TeamProps[] = [
     imageUrl: "src/assets/pa.jpeg",
     name: "Paul-Alexis Dray",
     position: "CEO",
+    bio: "Research engineer and developer in AI / Deep Learning and more specifically in NLP on generative models (GenAI)",
     socialNetworks: [
       { name: "Linkedin", url: "http://linkedin.com" },
       {
@@ -42,6 +44,7 @@ const teamList: TeamProps[] = [
     imageUrl: "src/assets/ady.jpeg",
     name: "Ady Boujnane",
     position: "COO",
+    bio: "Software development engineer. He oversees day-to-day operations and implements strategy to keep the company running smoothly.",
     socialNetworks: [
       { name: "Linkedin", url: "http://linkedin.com" },
       {
@@ -58,6 +61,7 @@ const teamList: TeamProps[] = [
     imageUrl: "src/assets/armel.jpeg",
     name: "Armel Fotsoh",
     position: "Lead Engineer",
+    bio: "PhD is an expert in software architecture and design, specializing in platforms integrating artificial intelligence.",
     socialNetworks: [
       { name: "Linkedin", url: "http://linkedin.com" },
 
@@ -71,6 +75,7 @@ const teamList: TeamProps[] = [
     imageUrl: "src/assets/JF.jpeg",
     name: "Jean-François Thaï",
     position: "CTO",
+    bio: "Information systems specialist with in-depth expertise in web dev and vision-oriented Deep Learning (Computer Vision).",
     socialNetworks: [
       { name: "Linkedin", url: "http://linkedin.com" },
       {
@@ -113,7 +118,7 @@ export const Team = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">
         {teamList.map(
-          ({ imageUrl, name, position, socialNetworks }: TeamProps) => (
+          ({ imageUrl, name, position, bio, socialNetworks }: TeamProps) => (
             <Card
               key={name}
               className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center"
@@ -131,7 +136,7 @@ export const Team = () => {
               </CardHeader>
 
               <CardContent className="text-center pb-2">
-                <p></p>
+                <p>{bio}</p>
               </CardContent>
 
               <CardFooter>

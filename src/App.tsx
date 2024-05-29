@@ -6,10 +6,9 @@ import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
 import { HowItWorks } from './components/HowItWorks';
 import { Navbar } from './components/Navbar';
-import { Newsletter } from './components/Newsletter';
+// import { Newsletter } from './components/Newsletter';
 // import { Pricing } from './components/Pricing';
 import { ScrollToTop } from './components/ScrollToTop';
-import { Services } from './components/Services';
 // import { Testimonials } from './components/Testimonials';
 import AboutPage from './components/BuboPage';
 import './App.css';
@@ -21,9 +20,8 @@ function Home() {
       <Hero />
       <HowItWorks />
       <Features />
-      <Services />
       <Cta />
-      <Newsletter />
+      {/* <Newsletter /> */}
       <FAQ />
       <Footer />
     </>

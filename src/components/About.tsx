@@ -22,9 +22,11 @@ export const About = () => {
                 Company
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-              "Since the dawn of time, the long-eared owl has flown silently, wisely and precisely towards its prey."
+              <i>"Since the dawn of time, the long-eared owl has flown silently, wisely and precisely towards its prey."</i><br/> 
 
-              Chance is fascinating; deciphering it is a notably arduous but hugely profitable task. Founded in 2017 by a team with pure tech DNA, Bubo has been working on the issue, via state-of-the-art AI publications and dedicated products
+              Chance is fascinating; deciphering it is a notably arduous but hugely profitable task.<br/> 
+              <br/>
+               Founded in 2017 by a team with pure tech DNA, Bubo has been working on the issue, via state-of-the-art AI publications and dedicated products.
               </p>
             </div>
 
