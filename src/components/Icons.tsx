@@ -13,11 +13,11 @@ export const LogoIcon = () => {
 export const KumbuIcon = () => {
   return (
     <img
-    src={"/assets/kumbu_logo.png"}
+    src={"/assets/Logo_kumbu.svg"}
     alt="Logo"
     className="logo-icon"
-    width="54"
-    height="54"
+    width="36"
+    height="36"
   />
   );
 };

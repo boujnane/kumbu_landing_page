@@ -12,7 +12,7 @@ export const Hero = () => {
           </h1>{" "}
         product{" "}
           <h2 className="inline">
-            <span className="inline bg-gradient-to-r from-[#949AF6] via-[#7479C2] to-[#474A78] text-transparent bg-clip-text">
+            <span className="inline bg-gradient-to-r from-[#01AF9D] via-[#02AF9C] to-[#06897B] text-transparent bg-clip-text">
               Kumbu.ai
             </span>{" "}
           </h2>

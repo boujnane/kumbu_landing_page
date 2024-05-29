@@ -42,7 +42,7 @@ export const HowItWorks = () => {
     >
       <h2 className="text-3xl md:text-4xl font-bold ">
         How It{" "}
-        <span className="inline bg-gradient-to-r from-[#949af6]  to-[#FF5400]  text-transparent bg-clip-text">
+        <span className="inline bg-gradient-to-r from-[#01AF9D]  to-[#FF5400]  text-transparent bg-clip-text">
           Works{" "}
         </span>
         Step-by-Step Guide

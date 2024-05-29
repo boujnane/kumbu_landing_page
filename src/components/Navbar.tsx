@@ -50,7 +50,7 @@ export const Navbar = () => {
               className="ml-2 font-bold text-xl flex items-center"
             >
               <KumbuIcon />
-              <span className="ml-2">
+              <span className="ml-2 inline bg-gradient-to-r from-[#01AF9D] via-[#02AF9C] to-[#06897B] text-transparent bg-clip-text">
               Kumbu
               </span>
             </Link>

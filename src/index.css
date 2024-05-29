@@ -17,7 +17,7 @@ html {
 }
 .shadow1 {
   position: absolute;
-  background: #949AF6;
+  background: #01AF9D;
   border-radius: 24px;
   rotate: 35deg;
   width: 260px;
@@ -40,12 +40,12 @@ html {
 
 @keyframes shadow-slide-1 {
   from {
-    background: #949AF6; 
+    background: #02AF9C; 
     right: 460px;
     top: 200px;
   }
   to {
-    background: #474A78; 
+    background: #06897B; 
     right: 160px;
     
   }
@@ -73,11 +73,11 @@ html {
 
   @keyframes shadow-slide-1 {
     from {
-      background: #949AF6; /* Couleur violette */
+      background: #02AF9C; /* Couleur violette */
       right: 460px;
     }
     to {
-      background: #474A78; /* Couleur différente pour le shadow1 */
+      background: #06897B; /* Couleur différente pour le shadow1 */
       right: 160px;
     }
   }
