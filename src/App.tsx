@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Cta } from './components/Cta';
 import { FAQ } from './components/FAQ';
 import { Features } from './components/Features';
@@ -13,6 +13,7 @@ import { ScrollToTop } from './components/ScrollToTop';
 import AboutPage from './components/BuboPage';
 import './App.css';
 import ScrollToHash from './components/ScrollToHash'; // Import ScrollToHash
+import KumbuMailing from './mail/page';
 
 function Home() {
   return (
@@ -28,16 +29,31 @@ function Home() {
   );
 }
 
+// Wrapper component to handle the conditional rendering of the Navbar
+function Layout() {
+  const location = useLocation();
+
+  // Check if the current path is "/mail"
+  const showNavbar = location.pathname !== '/mail';
+
+  return (
+    <>
+      {showNavbar && <Navbar />}
+      <ScrollToTop />
+      <ScrollToHash />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/mail" element={<KumbuMailing />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </>
+  );
+}
+
 function App() {
   return (
     <Router>
-      <Navbar />
-      <ScrollToTop />
-      <ScrollToHash /> {/* Add ScrollToHash */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutPage />} />
-      </Routes>
+      <Layout />
     </Router>
   );
 }
