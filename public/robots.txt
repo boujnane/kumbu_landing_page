@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*?noindex=true$
+Sitemap: https://kumbu.ai/sitemap.xml
