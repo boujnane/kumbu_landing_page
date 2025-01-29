@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 export const Statistics = () => {
+  const { t } = useTranslation("common"); // Namespace utilisé pour les traductions
+
   interface statsProps {
     quantity: string;
     description: string;
@@ -6,20 +10,20 @@ export const Statistics = () => {
 
   const stats: statsProps[] = [
     {
-      quantity: "+ 400K €",
-      description: "CA",
+      quantity: "+ 400K €", // Valeur de quantité en dur
+      description: t("statistics.description.ca"), // Traduction de la description
     },
     {
-      quantity: "100+",
-      description: "Users",
+      quantity: "100+", // Valeur de quantité en dur
+      description: t("statistics.description.users"),
     },
     {
-      quantity: "+ 10M",
-      description: "Processed documents",
+      quantity: "+ 10M", // Valeur de quantité en dur
+      description: t("statistics.description.documents"),
     },
     {
-      quantity: "3",
-      description: "Products",
+      quantity: "3", // Valeur de quantité en dur
+      description: t("statistics.description.products"),
     },
   ];
 

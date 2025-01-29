@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next"; // Import du hook
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -18,6 +19,8 @@ import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import { KumbuIcon } from "./Icons";
+import LanguageSwitcher from "./LanguageSwitcher";
+
 interface RouteProps {
   href: string;
   label: string;
@@ -26,20 +29,21 @@ interface RouteProps {
 const routeList: RouteProps[] = [
   {
     href: "/#features",
-    label: "Features",
+    label: "featuresection", // Utilisez la clé de traduction
   },
   {
     href: "/#faq",
-    label: "FAQ",
+    label: "faqsection", // Utilisez la clé de traduction
   },
   {
     href: "/about",
-    label: "About Us",
+    label: "aboutUssection", // Utilisez la clé de traduction
   },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { t } = useTranslation("common");
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
@@ -51,7 +55,7 @@ export const Navbar = () => {
             >
               <KumbuIcon />
               <span className="ml-2 inline bg-gradient-to-r from-[#01AF9D] via-[#02AF9C] to-[#06897B] text-transparent bg-clip-text">
-              Kumbu
+                Kumbu
               </span>
             </Link>
           </NavigationMenuItem>
@@ -60,10 +64,7 @@ export const Navbar = () => {
           <span className="flex md:hidden">
             <ModeToggle />
 
-            <Sheet
-              open={isOpen}
-              onOpenChange={setIsOpen}
-            >
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger className="px-2">
                 <Menu
                   className="flex md:hidden h-5 w-5"
@@ -87,7 +88,7 @@ export const Navbar = () => {
                       onClick={() => setIsOpen(false)}
                       className={buttonVariants({ variant: "ghost" })}
                     >
-                      {label}
+                      {t(label)} {/* Utilisez la méthode t pour obtenir la traduction */}
                     </Link>
                   ))}
                   <a
@@ -99,7 +100,7 @@ export const Navbar = () => {
                     })}`}
                   >
                     <GitHubLogoIcon className="mr-2 w-5 h-5" />
-                    Github
+                    {t("github")} {/* Traduction de "Github" */}
                   </a>
                 </nav>
               </SheetContent>
@@ -116,13 +117,14 @@ export const Navbar = () => {
                   variant: "ghost",
                 })}`}
               >
-                {route.label}
+                {t(route.label)} {/* Traduction des labels */}
               </Link>
             ))}
           </nav>
 
           <div className="hidden md:flex gap-2">
             <ModeToggle />
+            <LanguageSwitcher />
           </div>
         </NavigationMenuList>
       </NavigationMenu>

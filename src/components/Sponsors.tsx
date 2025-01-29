@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useTheme } from "./theme-provider";
 
 type SponsorProps = {
@@ -42,11 +43,13 @@ const sponsors: SponsorProps[] = [
 
 export const Sponsors = () => {
   const { theme } = useTheme();
+  const { t } = useTranslation("common"); // Utilisation du namespace "common"
+
 
   return (
     <section id="sponsors" className="container pt-24 sm:py-32">
       <h2 className="text-center text-md lg:text-xl font-bold mb-8 text-primary">
-        Clients & Partners
+      {t("partners.title")}
       </h2>
 
       <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
