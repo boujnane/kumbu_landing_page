@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import dotenv from "dotenv";
 
-dotenv.config(); // Charge les variables d'environnement depuis un fichier .env
+dotenv.config();
 
 export default defineConfig({
   base: "./",
