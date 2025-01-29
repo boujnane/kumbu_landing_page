@@ -1,0 +1,167 @@
+{
+  "about": {
+    "logoAlt": "Bubo Company logo",
+    "title": {
+      "start": "The",
+      "highlight": "Bubo",
+      "end": "Company"
+    },
+    "description": {
+      "quote": "\"Since the dawn of time, the long-eared owl has flown silently, wisely and precisely towards its prey.\"",
+      "part1": "Chance is fascinating; deciphering it is a notably arduous but hugely profitable task.",
+      "part2": "Founded in 2017 by a team with pure tech DNA, Bubo has been working on the issue, via state-of-the-art AI publications and dedicated products."
+    }
+  },
+  "statistics": {
+    "ca": "+ 400K €",
+    "users": "100+",
+    "documents": "+ 10M",
+    "products": "3",
+    "description": {
+      "ca": "CA",
+      "users": "Users",
+      "documents": "Processed documents",
+      "products": "Products"
+    }
+  },
+  "services": {
+    "title": "Client-Centric Services",
+    "description": "Bubo is committed to providing customer-centric services, putting our customers' needs and objectives at the heart of everything we do. Through our diversified offerings and tailored solutions, we strive to create exceptional and lasting experiences for each and every one of our customers.",
+    "list": [
+      {
+        "title": "Tailor-made App",
+        "description": "Bubo is able to develop a tailor-made application, taking business needs into consideration, and opting for the best web technologies."
+      },
+      {
+        "title": "Ai Research",
+        "description": "Bubo is able to advise and manage AI projects, thanks to its expertise and numerous published articles, mainly in NLP and ComputerVision."
+      },
+      {
+        "title": "Temporary expertise assignment",
+        "description": "Bubo provides expertise in data and web architecture, concerning AI and big data."
+      }
+    ]
+  },
+  "team": {
+    "title": "Our Dedicated Crew",
+    "description": "This is our close-knit team!",
+    "members": {
+      "Paul-Alexis Dray": {
+        "position": "CEO",
+        "bio": "Research engineer and developer in AI / Deep Learning and more specifically in NLP on generative models (GenAI)"
+      },
+      "Ady Boujnane": {
+        "position": "COO",
+        "bio": "Software development engineer. He oversees day-to-day operations and implements strategy to keep the company running smoothly."
+      },
+      "Armel Fotsoh": {
+        "position": "Lead Engineer",
+        "bio": "PhD is an expert in software architecture and design, specializing in platforms integrating artificial intelligence."
+      },
+      "Jean-François Thaï": {
+        "position": "CTO",
+        "bio": "Information systems specialist with in-depth expertise in web dev and vision-oriented Deep Learning (Computer Vision)."
+      }
+    },
+    "socialNetworks": {
+      "Linkedin": "LinkedIn",
+      "Facebook": "Facebook",
+      "Instagram": "Instagram"
+    }
+  },"partners": {
+    "title": "Clients & Partners"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "Is this app free?",
+        "answer": "Yes, Kumbu offers a free plan for personal use with limited functionality, but organizations and advanced features require a paid subscription: we have different offers in this sense."
+      },
+      {
+        "question": "How does it work?",
+        "answer": "Kumbu is a web platform dedicated to centralizing corporate knowledge and documents. These documents can be digital or paper scans. When you upload documents, they are stored on a secure cloud, and our software solution makes it easy to access them: directly in folders, via a search bar or via a dedicated chat."
+      },
+      {
+        "question": "Why should I care?",
+        "answer": "Corporate knowledge is the crucial raw material for operating in the 21st century. Having a functional and efficient information management system sets you apart in the ecosystem and among your competitors."
+      },
+      {
+        "question": "What data do you collect?",
+        "answer": "We don't have direct access to our customers' documents, which are stored in separate partitions. We only collect platform usage data in order to improve the user experience."
+      }
+    ],
+    "contact": {
+      "text": "Still have questions?",
+      "linkText": "Contact us",
+      "email": "mailto:contact@kumbu.ai"
+    }
+  },
+  "cta": {
+    "title": {
+      "part1": "All Your",
+      "highlight": " Ideas & Concepts ",
+      "part2": "in One Interface"
+    },
+    "description": "Kumbu seamlessly integrates all your ideas and concepts into an intuitive interface, streamlining collaboration and innovation within your team.",
+    "button": "Request a Demo"
+  },
+  "footer": {
+    "followUs": "Follow Us",
+    "website": "Website",
+    "features": "Features",
+    "aboutUs": "About Us",
+    "faq": "FAQ",
+    "community": "Community",
+    "copyright":  "is a product of Bubo SAS"
+  },
+  "features": {
+    "monitoringDashboard": "Monitoring - Dashboard",
+    "monitoringDashboardDescription": "Our solution includes platform activity monitoring, enabling fine-tuned management of system performance and utilization. The dashboard provides a clear overview of current activities, and relevant statistics, enabling users to make informed decisions and detect potential problems quickly.",
+    "personalizationCustomization": "Personalization - Customization",
+    "personalizationCustomizationDescription": "Our solution offers settings and customization to meet the specific needs of each user.",
+    "advancedSearch": "Advanced Search",
+    "advancedSearchDescription": "The integration of lexical search and semantic dictionary facilitates rapid localization of information.",
+    "darkLightTheme": "Dark/Light theme",
+    "chatAI": "Chat AI",
+    "semanticSearch": "Semantic Search",
+    "regexpSearch": "Regexp Search",
+    "manageFiles": "Manage Files",
+    "security": "Security",
+    "latestAITechnology": "Latest AI technology",
+    "highCustomization": "High customization",
+    "userFriendlyInterface": "User-Friendly Interface",
+    "manyGreatFeatures": "Many",
+    "greatFeatures": "Great Features"
+  },
+  "howItWorks": {
+    "title": "How It",
+    "subtitle": " Works",
+    "description": "Easy to use, quick and effective to learn"
+  },
+  "feature1": {
+    "title": "Upload your docs",
+    "description": "Simply create an account, drag and drop your files, and off you go!"
+  },
+  "feature2": {
+    "title": "Manage Team",
+    "description": "Use Kumbu's team management tools to define access authorizations and guarantee data confidentiality."
+  },
+  "feature3": {
+    "title": "Search in your docs",
+    "description": "Explore Kumbu's advanced search features to quickly find specific information in your documents, with 3 levels of granularity."
+  },
+  "feature4": {
+    "title": "Chat with your docs",
+    "description": "Engage in document-related conversations with Kumbu chat, which lets you get precise answers in natural language about your own documents."
+  },
+  "featuresection": "Features",
+  "faqsection": "FAQ",
+  "aboutUssection": "About Us",
+  "github": "GitHub",
+  "new": "New",
+  "product": "Product",
+  "kumbuAi": "Kumbu.ai",
+  "heroDescription": "Discover our revolutionary archiving and document management solution. With advanced AI-based search and instant chat like GPT, find your information in an instant.",
+  "getStarted": "Get Started"
+}

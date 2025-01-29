@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useTranslation } from "react-i18next"; // Importer useTranslation pour l'internationalisation
 
 interface FeatureProps {
   title: string;
@@ -17,51 +18,53 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    title: "Monitoring - Dashboard",
+    title: "monitoringDashboard",
     description:
-      "Our solution includes platform activity monitoring, enabling fine-tuned management of system performance and utilization. The dashboard provides a clear overview of current activities, and relevant statistics, enabling users to make informed decisions and detect potential problems quickly.",
+      "monitoringDashboardDescription",
     image: "/assets/dashboard.png",
     imageDark: "/assets/dashboard_black.png",
   },
   {
-    title: "Personnalization - Customization",
+    title: "personalizationCustomization",
     description:
-      "Our solution offers settings and customization to meet the specific needs of each user. With the ability to customize search preferences, metadata filters and the user interface, each user can create a tailor-made environment that maximizes efficiency and satisfaction.",
+      "personalizationCustomizationDescription",
     image: "/assets/customization.png",
     imageDark: "/assets/customization-dark.png",
   },
   {
-    title: "Advanced Search",
+    title: "advancedSearch",
     description:
-      "The integration of lexical search and semantic dictionary facilitates rapid localization of information, while the use of regular expressions enables more flexible searches. Customized metadata allows results to be filtered according to user needs.",
+      "advancedSearchDescription",
     image: "/assets/loupe.png",
     imageDark: "/assets/loupe_dark.png",
   },
 ];
 
 const featureList: string[] = [
-  "Dark/Light theme",
-  "Chat AI",
-  "Semantic Search",
-  "Regexp Search",
-  "Manage Files",
-  "Security",
-  "Latest AI technology",
-  "High customizaton",
-  "User-Friendly Interface",
+  "darkLightTheme",
+  "chatAI",
+  "semanticSearch",
+  "regexpSearch",
+  "manageFiles",
+  "security",
+  "latestAITechnology",
+  "highCustomization",
+  "userFriendlyInterface",
 ];
 
 export const Features = () => {
   const { theme } = useTheme();
+  const { t } = useTranslation("common"); // Utilisation de `t` pour la traduction
+
   return (
     <section
       id="features"
       className="container py-24 sm:py-32 space-y-8"
     >
       <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-        Many{" "}
+        {t("features.manyGreatFeatures")}{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Great Features
+          {t("features.greatFeatures")}
         </span>
       </h2>
 
@@ -72,30 +75,32 @@ export const Features = () => {
               variant="secondary"
               className="text-sm"
             >
-              {feature}
+              {t(`features.${feature}`)} {/* Traduction dynamique */}
             </Badge>
           </div>
         ))}
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {features.map(({ title, description, image, imageDark }: FeatureProps) => (
-        <Card key={title}>
-          <CardHeader>
-            <CardTitle>{title}</CardTitle>
-          </CardHeader>
+        {features.map(({ title, description, image, imageDark }: FeatureProps) => (
+          <Card key={title}>
+            <CardHeader>
+              <CardTitle>{t(`features.${title}`)}</CardTitle> {/* Traduction dynamique */}
+            </CardHeader>
 
-          <CardContent className="mb-4">{description}</CardContent>
+            <CardContent className="mb-4">
+              {t(`features.${description}`)} {/* Traduction dynamique */}
+            </CardContent>
 
-          <CardFooter>
-            <img
-              src={theme === "light" ? image : imageDark}
-              alt="About feature"
-              className="w-[200px] lg:w-[400px] mx-auto"
-            />
-          </CardFooter>
-        </Card>
-      ))}
+            <CardFooter>
+              <img
+                src={theme === "light" ? image : imageDark}
+                alt={t("features.featureImageAlt")}
+                className="w-[200px] lg:w-[400px] mx-auto"
+              />
+            </CardFooter>
+          </Card>
+        ))}
       </div>
     </section>
   );

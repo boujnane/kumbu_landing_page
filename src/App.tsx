@@ -10,8 +10,9 @@ import { ScrollToTop } from './components/ScrollToTop';
 import ScrollToHash from './components/ScrollToHash'; // Import ScrollToHash
 import AboutPage from './components/BuboPage';
 import KumbuMailing from './mail/page';
+import TagManager from 'react-gtm-module';
+import { useEffect } from 'react';
 import './App.css';
-import { GoogleAnalytics } from '@next/third-parties/google'
 
 function Home() {
   return (
@@ -40,12 +41,19 @@ function Layout({ children }: { children: React.ReactNode }) {
       <ScrollToTop />
       <ScrollToHash />
       {children}
-      <GoogleAnalytics gaId="G-PTZBJFLGJH" /> {/* Replace with your actual GA measurement ID */}
     </>
   );
 }
 
 function App() {
+  // Initialize Google Tag Manager
+  useEffect(() => {
+    const tagManagerArgs = {
+      gtmId: 'G-PTZBJFLGJH', // Remplacez "GTM-XXXXXXX" par votre ID GTM
+    };
+    TagManager.initialize(tagManagerArgs);
+  }, []);
+
   return (
     <Router>
       <Layout>

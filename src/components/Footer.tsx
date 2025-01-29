@@ -1,6 +1,9 @@
 import { LogoIcon } from "./Icons";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+  const { t } = useTranslation("common");
+
   return (
     <footer id="footer">
       <hr className="w-11/12 mx-auto" />
@@ -13,44 +16,42 @@ export const Footer = () => {
             className="font-bold text-xl flex"
           >
             <LogoIcon />
-            &nbsp;
-             Bubo
+            &nbsp; Bubo
           </a>
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Follow US</h3>
+          <h3 className="font-bold text-lg">{t("footer.followUs")}</h3>
           <div>
             <a
               rel="noreferrer noopener"
               href="https://www.linkedin.com/company/bubo-bubo"
               className="opacity-60 hover:opacity-100"
             >
-              Linkedin
+              LinkedIn
             </a>
           </div>
         </div>
 
-
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Website</h3>
+          <h3 className="font-bold text-lg">{t("footer.website")}</h3>
           <div>
             <a
               rel="noreferrer noopener"
               href="/#features"
               className="opacity-60 hover:opacity-100"
             >
-              Features
+              {t("footer.features")}
             </a>
           </div>
 
           <div>
             <a
               rel="noreferrer noopener"
-              href="about"
+              href="/about"
               className="opacity-60 hover:opacity-100"
             >
-              About Us
+              {t("footer.aboutUs")}
             </a>
           </div>
 
@@ -60,13 +61,13 @@ export const Footer = () => {
               href="/#faq"
               className="opacity-60 hover:opacity-100"
             >
-              FAQ
+              {t("footer.faq")}
             </a>
           </div>
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Community</h3>
+          <h3 className="font-bold text-lg">{t("footer.community")}</h3>
           <div>
             <a
               rel="noreferrer noopener"
@@ -101,7 +102,7 @@ export const Footer = () => {
 
       <section className="container pb-14 text-center">
         <h3>
-          &copy; 2024 {" "} 
+          &copy; 2024{" "}
           <a
             rel="noreferrer noopener"
             target="_blank"
@@ -109,7 +110,7 @@ export const Footer = () => {
           >
             Kumbu
           </a>
-          &nbsp;is a Bubo SAS product
+          &nbsp;{t("footer.copyright")}
         </h3>
       </section>
     </footer>

@@ -1,0 +1,169 @@
+{
+    "about": {
+      "logoAlt": "Logo de la société Bubo",
+      "title": {
+        "start": "L'Entreprise",
+        "highlight": "Bubo",
+        "end": ""
+      },
+      "description": {
+        "quote": "\"Depuis la nuit des temps, le hibou grand-duc vole silencieusement, sagement et précisément vers sa proie.\"",
+        "part1": "Le hasard est fascinant ; le déchiffrer est une tâche remarquablement ardue mais extrêmement rentable.",
+        "part2": "Fondée en 2017 par une équipe avec un ADN purement technologique, Bubo travaille sur cette problématique à travers des publications d'IA de pointe et des produits dédiés."
+      }
+    },
+    "statistics": {
+      "ca": "+ 400K €",
+      "users": "100+",
+      "documents": "+ 10M",
+      "products": "3",
+      "description": {
+        "ca": "CA",
+        "users": "Utilisateurs",
+        "documents": "Documents traités",
+        "products": "Produits"
+      }
+    },
+    "services": {
+      "title": "Services Centrés sur le Client",
+      "description": "Bubo s'engage à fournir des services centrés sur le client, en mettant les besoins et les objectifs de nos clients au cœur de toutes nos actions. Grâce à notre offre diversifiée et à nos solutions sur mesure, nous nous efforçons de créer des expériences exceptionnelles et durables pour chacun de nos clients.",
+      "list": [
+        {
+          "title": "Application sur Mesure",
+          "description": "Bubo est capable de développer une application sur mesure, en prenant en compte les besoins spécifiques de l'entreprise et en optant pour les meilleures technologies web."
+        },
+        {
+          "title": "Recherche en IA",
+          "description": "Bubo est en mesure de conseiller et de gérer des projets d'IA, grâce à son expertise et à de nombreux articles publiés, principalement en NLP et ComputerVision."
+        },
+        {
+          "title": "Mission d'expertise temporaire",
+          "description": "Bubo fournit son expertise en architecture de données et web, concernant l'IA et le big data."
+        }
+      ]
+  },
+  "team": {
+    "title": "Notre équipe dévouée",
+    "description": "Voici notre équipe soudée !",
+    "members": {
+      "Paul-Alexis Dray": {
+        "position": "PDG",
+        "bio": "Ingénieur de recherche et développeur en IA / Deep Learning, spécialisé dans le traitement du langage naturel (NLP) et plus particulièrement dans les modèles génératifs (GenAI)."
+      },
+      "Ady Boujnane": {
+        "position": "Directeur d'exploitation",
+        "bio": "Ingénieur en développement logiciel. Il supervise les opérations quotidiennes et met en œuvre la stratégie pour assurer le bon fonctionnement de l'entreprise."
+      },
+      "Armel Fotsoh": {
+        "position": "Ingénieur principal",
+        "bio": "Docteur en informatique, expert en architecture logicielle et conception, spécialisé dans les plateformes intégrant l'intelligence artificielle."
+      },
+      "Jean-François Thaï": {
+        "position": "Directeur technique",
+        "bio": "Spécialiste des systèmes d'information avec une expertise approfondie en développement web et en Deep Learning orienté vision (Computer Vision)."
+      }
+    },
+    "socialNetworks": {
+      "Linkedin": "LinkedIn",
+      "Facebook": "Facebook",
+      "Instagram": "Instagram"
+    }
+  },
+  "partners": {
+    "title": "Clients & Partenaires"
+  },
+   "faq": {
+    "title": "Foire Aux Questions",
+    "questions": [
+      {
+        "question": "Cette application est-elle gratuite ?",
+        "answer": "Oui, Kumbu propose un plan gratuit pour un usage personnel avec des fonctionnalités limitées, mais les organisations et les fonctionnalités avancées nécessitent un abonnement payant : nous avons différentes offres à cet égard."
+      },
+      {
+        "question": "Comment cela fonctionne-t-il ?",
+        "answer": "Kumbu est une plateforme web dédiée à la centralisation des connaissances et des documents d'entreprise. Ces documents peuvent être numériques ou des numérisations de documents papier. Lorsque vous téléchargez des documents, ils sont stockés dans un cloud sécurisé, et notre solution logicielle facilite leur accès : directement dans des dossiers, via une barre de recherche ou via un chat dédié."
+      },
+      {
+        "question": "Pourquoi devrais-je m'en soucier ?",
+        "answer": "Les connaissances d'entreprise sont la matière première cruciale pour fonctionner au 21e siècle. Disposer d'un système de gestion de l'information fonctionnel et efficace vous distingue dans l'écosystème et auprès de vos concurrents."
+      },
+      {
+        "question": "Quelles données collectez-vous ?",
+        "answer": "Nous n'avons pas accès direct aux documents de nos clients, qui sont stockés dans des partitions séparées. Nous ne collectons que des données d'utilisation de la plateforme afin d'améliorer l'expérience utilisateur."
+      }
+    ],
+    "contact": {
+      "text": "Vous avez encore des questions ?",
+      "linkText": "Contactez-nous",
+      "email": "mailto:contact@kumbu.ai"
+    }
+  },
+  "cta": {
+    "title": {
+      "part1": "Toutes vos",
+      "highlight": " Idées & Concepts ",
+      "part2": "en une interface"
+    },
+    "description": "Kumbu intègre parfaitement toutes vos idées et concepts dans une interface intuitive, facilitant la collaboration et l'innovation au sein de votre équipe.",
+    "button": "Demander une démo"
+  },
+  "footer": {
+    "followUs": "Suivez-nous",
+    "website": "Site Web",
+    "features": "Fonctionnalités",
+    "aboutUs": "À propos de nous",
+    "faq": "FAQ",
+    "community": "Communauté",
+    "copyright":  "est un produit de Bubo SAS"
+  },
+  "features": {
+    "monitoringDashboard": "Tableau de bord - Suivi",
+    "monitoringDashboardDescription": "Notre solution inclut un suivi des activités de la plateforme, permettant une gestion fine de la performance et de l’utilisation du système.",
+    "personalizationCustomization": "Personnalisation - Paramétrage",
+    "personalizationCustomizationDescription": "Notre solution offre des paramètres et des options de personnalisation pour répondre aux besoins spécifiques de chaque utilisateur.",
+    "advancedSearch": "Recherche avancée",
+    "advancedSearchDescription": "L'intégration de la recherche lexicale et du dictionnaire sémantique facilite la localisation rapide de l'information.",
+    "darkLightTheme": "Thème sombre/claire",
+    "chatAI": "Chat AI",
+    "semanticSearch": "Recherche sémantique",
+    "regexpSearch": "Recherche avec regexp",
+    "manageFiles": "Gestion des fichiers",
+    "security": "Sécurité",
+    "latestAITechnology": "Dernière technologie IA",
+    "highCustomization": "Haute personnalisation",
+    "userFriendlyInterface": "Interface conviviale",
+    "manyGreatFeatures": "De nombreuses",
+    "greatFeatures": "fonctionnalités exceptionnelles",
+    "featureImageAlt": "Image de la fonctionnalité"
+  },
+  "howItWorks": {
+    "title": "Comment ",
+    "subtitle": "ça marche ?",
+    "description": "Facile à utiliser, rapide et efficace à apprendre"
+  },
+  "feature1": {
+    "title": "Téléchargez vos documents",
+    "description": "Créez simplement un compte, glissez-déposez vos fichiers, et c'est parti !"
+  },
+  "feature2": {
+    "title": "Gérez votre équipe",
+    "description": "Utilisez les outils de gestion d'équipe de Kumbu pour définir les autorisations d'accès et garantir la confidentialité des données."
+  },
+  "feature3": {
+    "title": "Recherchez dans vos documents",
+    "description": "Explorez les fonctionnalités de recherche avancée de Kumbu pour trouver rapidement des informations spécifiques dans vos documents, avec 3 niveaux de granularité."
+  },
+  "feature4": {
+    "title": "Discutez avec vos documents",
+    "description": "Engagez des conversations liées aux documents avec le chat Kumbu, qui vous permet d'obtenir des réponses précises en langage naturel sur vos propres documents."
+  },
+  "featuresection": "Fonctionnalités",
+  "faqsection": "FAQ",
+  "aboutUssection": "À propos de nous",
+  "github": "GitHub",
+  "new": "Nouveau",
+  "product": "produit",
+  "kumbuAi": "Kumbu.ai",
+  "heroDescription": "Découvrez notre solution révolutionnaire d'archivage et de gestion de documents. Grâce à une recherche avancée basée sur l'IA et un chat instantané comme GPT, trouvez vos informations en un instant.",
+  "getStarted": "Commencer"
+}

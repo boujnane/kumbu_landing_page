@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
@@ -12,7 +13,6 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
 interface TeamProps {
   imageUrl: string;
   name: string;
-  position: string;
   bio: string;
   socialNetworks: SociaNetworkslProps[];
 }
@@ -26,99 +26,77 @@ const teamList: TeamProps[] = [
   {
     imageUrl: "/assets/pa.jpeg",
     name: "Paul-Alexis Dray",
-    position: "CEO",
     bio: "Research engineer and developer in AI / Deep Learning and more specifically in NLP on generative models (GenAI)",
     socialNetworks: [
       { name: "Linkedin", url: "http://linkedin.com" },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
+      { name: "Facebook", url: "https://www.facebook.com/" },
+      { name: "Instagram", url: "https://www.instagram.com/" },
     ],
   },
   {
     imageUrl: "/assets/ady.jpeg",
     name: "Ady Boujnane",
-    position: "COO",
     bio: "Software development engineer. He oversees day-to-day operations and implements strategy to keep the company running smoothly.",
     socialNetworks: [
       { name: "Linkedin", url: "http://linkedin.com" },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
+      { name: "Facebook", url: "https://www.facebook.com/" },
+      { name: "Instagram", url: "https://www.instagram.com/" },
     ],
   },
   {
     imageUrl: "/assets/armel.jpeg",
     name: "Armel Fotsoh",
-    position: "Lead Engineer",
     bio: "PhD is an expert in software architecture and design, specializing in platforms integrating artificial intelligence.",
     socialNetworks: [
       { name: "Linkedin", url: "http://linkedin.com" },
-
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
+      { name: "Instagram", url: "https://www.instagram.com/" },
     ],
   },
   {
     imageUrl: "/assets/JF.jpeg",
     name: "Jean-François Thaï",
-    position: "CTO",
     bio: "Information systems specialist with in-depth expertise in web dev and vision-oriented Deep Learning (Computer Vision).",
     socialNetworks: [
       { name: "Linkedin", url: "http://linkedin.com" },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
+      { name: "Facebook", url: "https://www.facebook.com/" },
     ],
   },
 ];
 
 export const Team = () => {
+  const { t } = useTranslation("common"); // Utilisation du namespace "common"
+
   const socialIcon = (iconName: string) => {
     switch (iconName) {
       case "Linkedin":
         return <Linkedin size="20" />;
-
       case "Facebook":
         return <Facebook size="20" />;
-
       case "Instagram":
         return <Instagram size="20" />;
+      default:
+        return null;
     }
   };
 
   return (
-    <section
-      id="team"
-      className="container py-24 sm:py-32"
-    >
+    <section id="team" className="container py-24 sm:py-32">
       <h2 className="text-3xl md:text-4xl font-bold">
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Our Dedicated{" "}
+          {t("team.title")}
         </span>
-        Crew
       </h2>
 
       <p className="mt-4 mb-10 text-xl text-muted-foreground">
-      This is our close-knit team !
+        {t("team.description")}
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">
-        {teamList.map(
-          ({ imageUrl, name, position, bio, socialNetworks }: TeamProps) => (
+        {teamList.map(({ imageUrl, name, socialNetworks }: TeamProps) => {
+          const translatedPosition = t(`team.members.${name}.position`);
+          const translatedBio = t(`team.members.${name}.bio`);
+
+          return (
             <Card
               key={name}
               className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center"
@@ -126,17 +104,17 @@ export const Team = () => {
               <CardHeader className="mt-8 flex justify-center items-center pb-2">
                 <img
                   src={imageUrl}
-                  alt={`${name} ${position}`}
+                  alt={`${name} ${translatedPosition}`}
                   className="absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover"
                 />
                 <CardTitle className="text-center">{name}</CardTitle>
                 <CardDescription className="text-primary">
-                  {position}
+                  {translatedPosition}
                 </CardDescription>
               </CardHeader>
 
               <CardContent className="text-center pb-2">
-                <p>{bio}</p>
+                <p>{translatedBio}</p>
               </CardContent>
 
               <CardFooter>
@@ -158,8 +136,8 @@ export const Team = () => {
                 ))}
               </CardFooter>
             </Card>
-          )
-        )}
+          );
+        })}
       </div>
     </section>
   );
