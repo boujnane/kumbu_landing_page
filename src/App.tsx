@@ -13,6 +13,7 @@ import KumbuMailing from './mail/page';
 import TagManager from 'react-gtm-module';
 import { useEffect } from 'react';
 import './App.css';
+import WaitingList from './waitlist/page';
 
 function Home() {
   return (
@@ -61,6 +62,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/mail" element={<KumbuMailing />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/waitlist" element={<WaitingList />} />
         </Routes>
       </Layout>
     </Router>

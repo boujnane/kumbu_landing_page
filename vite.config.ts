@@ -14,12 +14,12 @@ export default defineConfig({
     },
   },
   server: {
-    host: process.env.HOST || "0.0.0.0",
+  host: "localhost",
     port: 3001,
     hmr: false,
   },
   preview: {
-    host: process.env.HOST || "0.0.0.0",
+  host: "localhost",
     port: 3001,
   },
   build: {
