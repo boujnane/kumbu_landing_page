@@ -29,30 +29,28 @@ interface RouteProps {
 const routeList: RouteProps[] = [
   {
     href: "/#features",
-    label: "featuresection", // Utilisez la clé de traduction
+    label: "featuresection",
   },
   {
     href: "/#faq",
-    label: "faqsection", // Utilisez la clé de traduction
+    label: "faqsection",
   },
   {
     href: "/about",
-    label: "aboutUssection", // Utilisez la clé de traduction
+    label: "aboutUssection",
   },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { t } = useTranslation("common");
+
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
-        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
+        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between items-center">
           <NavigationMenuItem className="font-bold flex">
-            <Link
-              to="/"
-              className="ml-2 font-bold text-xl flex items-center"
-            >
+            <Link to="/" className="ml-2 font-bold text-xl flex items-center">
               <KumbuIcon />
               <span className="ml-2 inline bg-gradient-to-r from-[#01AF9D] via-[#02AF9C] to-[#06897B] text-transparent bg-clip-text">
                 Kumbu
@@ -60,72 +58,67 @@ export const Navbar = () => {
             </Link>
           </NavigationMenuItem>
 
-          {/* mobile */}
-          <span className="flex md:hidden">
-            <ModeToggle />
-
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger className="px-2">
-                <Menu
-                  className="flex md:hidden h-5 w-5"
-                  onClick={() => setIsOpen(true)}
-                >
-                  <span className="sr-only">Menu Icon</span>
-                </Menu>
-              </SheetTrigger>
-
-              <SheetContent side={"left"}>
-                <SheetHeader>
-                  <SheetTitle className="font-bold text-xl">
-                    Kumbu
-                  </SheetTitle>
-                </SheetHeader>
-                <nav className="flex flex-col justify-center items-center gap-2 mt-4">
-                  {routeList.map(({ href, label }: RouteProps) => (
-                    <Link
-                      key={label}
-                      to={href}
-                      onClick={() => setIsOpen(false)}
-                      className={buttonVariants({ variant: "ghost" })}
-                    >
-                      {t(label)} {/* Utilisez la méthode t pour obtenir la traduction */}
-                    </Link>
-                  ))}
-                  <a
-                    rel="noreferrer noopener"
-                    href="https://github.com"
-                    target="_blank"
-                    className={`w-[110px] border ${buttonVariants({
-                      variant: "secondary",
-                    })}`}
-                  >
-                    <GitHubLogoIcon className="mr-2 w-5 h-5" />
-                    {t("github")} {/* Traduction de "Github" */}
-                  </a>
-                </nav>
-              </SheetContent>
-            </Sheet>
-          </span>
-
-          {/* desktop */}
           <nav className="hidden md:flex gap-2">
             {routeList.map((route: RouteProps, i) => (
               <Link
                 to={route.href}
                 key={i}
-                className={`text-[17px] ${buttonVariants({
-                  variant: "ghost",
-                })}`}
+                className={`text-[17px] ${buttonVariants({ variant: "ghost" })}`}
               >
-                {t(route.label)} {/* Traduction des labels */}
+                {t(route.label)}
               </Link>
             ))}
           </nav>
 
-          <div className="hidden md:flex gap-2">
+          <div className="hidden md:flex items-center gap-4">
+            <Link
+              to="/waitlist"
+              className="text-[16px] font-semibold underline underline-offset-4 decoration-[#FF5400] hover:decoration-[#FFD800] transition"
+            >
+              {t("requestAccess")}
+            </Link>
             <ModeToggle />
             <LanguageSwitcher />
           </div>
+
+          {/* Mobile Menu */}
+          <span className="flex md:hidden">
+            <ModeToggle />
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger className="px-2">
+                <Menu className="h-5 w-5" />
+              </SheetTrigger>
+
+              <SheetContent side="left">
+                <SheetHeader>
+                  <SheetTitle className="font-bold text-xl">Kumbu</SheetTitle>
+                </SheetHeader>
+                <nav className="flex flex-col items-center gap-2 mt-4">
+                  {[...routeList, { href: "/waitlist", label: "requestAccess" }].map(
+                    ({ href, label }: RouteProps) => (
+                      <Link
+                        key={label}
+                        to={href}
+                        onClick={() => setIsOpen(false)}
+                        className={buttonVariants({ variant: "ghost" })}
+                      >
+                        {t(label)}
+                      </Link>
+                    )
+                  )}
+                  <a
+                    rel="noreferrer noopener"
+                    href="https://github.com"
+                    target="_blank"
+                    className={`w-[110px] border ${buttonVariants({ variant: "secondary" })}`}
+                  >
+                    <GitHubLogoIcon className="mr-2 w-5 h-5" />
+                    {t("github")}
+                  </a>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </span>
         </NavigationMenuList>
       </NavigationMenu>
     </header>

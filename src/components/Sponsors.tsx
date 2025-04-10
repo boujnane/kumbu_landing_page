@@ -29,14 +29,14 @@ const sponsors: SponsorProps[] = [
     imageSrcDark: "/assets/partners/gioza_logo.png",
   },
   {
-    name: "Yxir",
-    imageSrcLight: "/assets/partners/yxir.png",
-    imageSrcDark: "/assets/partners/yxir.png",
-  },
-  {
     name: "EtsIzySoft",
     imageSrcLight: "/assets/partners/etsizysoft_logo.png",
     imageSrcDark: "/assets/partners/etsizysoft_logo_dark.png",
+  },
+  {
+    name: "FineBiscuits",
+    imageSrcLight: "/assets/partners/fine-biscuits-logo 1.png",
+    imageSrcDark: "/assets/partners/fine-biscuits-logo 1.png",
   }
   
 ];

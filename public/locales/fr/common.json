@@ -1,6 +1,7 @@
 {
     "about": {
       "logoAlt": "Logo de la société Bubo",
+      "cta" : "Site web Bubo",
       "title": {
         "start": "L'Entreprise",
         "highlight": "Bubo",
@@ -160,6 +161,7 @@
   "featuresection": "Fonctionnalités",
   "faqsection": "FAQ",
   "aboutUssection": "À propos de nous",
+  "requestAccess": "Demander un accès",
   "github": "GitHub",
   "new": "Nouveau",
   "product": "produit",

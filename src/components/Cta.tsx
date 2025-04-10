@@ -25,7 +25,7 @@ export const Cta = () => {
         <div className="space-y-4 lg:col-start-2">
           <a
             className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full md:mr-4 md:w-auto"
-            href="https://calendly.com/bubobubo/intro?month=2024-12"
+            href="/waitlist"
             rel="noopener noreferrer"
           >
             {t("cta.button")}
