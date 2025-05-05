@@ -156,6 +156,28 @@
     "title": "Chat with your docs",
     "description": "Engage in document-related conversations with Kumbu chat, which lets you get precise answers in natural language about your own documents."
   },
+  "tutorialSection": {
+    "title": "Ready to become an expert?",
+    "exploreAll": "Explore all tutorials"
+  },
+  "tutorials": {
+    "onboarding": {
+      "title": "Onboarding",
+      "description": "Learn how to get started with our app."
+    },
+    "navigation": {
+      "title": "Navigation",
+      "description": "Learn how to navigate the interface."
+    },
+    "search": {
+      "title": "Search",
+      "description": "How to use the search functionality."
+    },
+    "chat": {
+      "title": "Chat",
+      "description": "Learn how to use the chat feature."
+    }
+  },
   "featuresection": "Features",
   "faqsection": "FAQ",
   "aboutUssection": "About Us",

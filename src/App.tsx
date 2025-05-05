@@ -8,12 +8,14 @@ import { HowItWorks } from './components/HowItWorks';
 import { Navbar } from './components/Navbar';
 import { ScrollToTop } from './components/ScrollToTop';
 import ScrollToHash from './components/ScrollToHash'; // Import ScrollToHash
+import { VideoCarousel } from './components/VideoCarousel';
 import AboutPage from './components/BuboPage';
 import KumbuMailing from './mail/page';
 import TagManager from 'react-gtm-module';
 import { useEffect } from 'react';
 import './App.css';
 import WaitingList from './waitlist/page';
+import TutorialSection from './components/TutorialSection';
 
 function Home() {
   return (
@@ -21,6 +23,7 @@ function Home() {
       <Hero />
       <HowItWorks />
       <Features />
+      <TutorialSection />
       <Cta />
       {/* <Newsletter /> */}
       <FAQ />
@@ -63,6 +66,7 @@ function App() {
           <Route path="/mail" element={<KumbuMailing />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/waitlist" element={<WaitingList />} />
+          <Route path="/tutorials" element={<VideoCarousel />} />
         </Routes>
       </Layout>
     </Router>

@@ -1,19 +1,29 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 		<!--	created with www.mysitemapgenerator.com	-->
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-	<loc>https://kumbu.ai/</loc>
-	<lastmod>2024-12-17T16:17:12+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://kumbu.ai/about</loc>
-	<lastmod>2024-12-17T16:17:12+01:00</lastmod>
+	<url>
+	<loc>https://www.kumbu.ai/</loc>
+	<lastmod>2025-05-12T19:15:05+01:00</lastmod>
 	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://kumbu.ai/mail</loc>
-	<lastmod>2024-12-17T16:17:12+01:00</lastmod>
+	</url>
+	<url>
+	<loc>https://www.kumbu.ai/waitlist</loc>
+	<lastmod>2025-05-12T19:15:05+01:00</lastmod>
 	<priority>1.0</priority>
-</url>
+	</url>
+	<url>
+	<loc>https://www.kumbu.ai/about</loc>
+	<lastmod>2025-05-12T19:15:05+01:00</lastmod>
+	<priority>1.0</priority>
+	</url>
+	<url>
+	<loc>https://www.kumbu.ai/tutorials</loc>
+	<lastmod>2025-05-12T19:15:05+01:00</lastmod>
+	<priority>1.0</priority>
+	</url>
+	<url>
+	<loc>https://www.kumbu.ai/mail</loc>
+	<lastmod>2025-05-12T19:15:05+01:00</lastmod>
+	<priority>1.0</priority>
+	</url>
 </urlset>

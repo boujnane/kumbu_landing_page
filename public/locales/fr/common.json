@@ -158,6 +158,28 @@
     "title": "Discutez avec vos documents",
     "description": "Engagez des conversations liées aux documents avec le chat Kumbu, qui vous permet d'obtenir des réponses précises en langage naturel sur vos propres documents."
   },
+  "tutorialSection": {
+    "title": "Prêt à devenir un expert ?",
+    "exploreAll": "Explorez tous les tutoriels"
+  },
+  "tutorials": {
+    "onboarding": {
+      "title": "Onboarding",
+      "description": "Découvrez comment commencer avec notre application."
+    },
+    "navigation": {
+      "title": "Navigation",
+      "description": "Apprenez à naviguer dans l'interface."
+    },
+    "search": {
+      "title": "Recherche",
+      "description": "Comment utiliser la fonctionnalité de recherche."
+    },
+    "chat": {
+      "title": "Chat",
+      "description": "Découvrez comment utiliser le chat."
+    }
+  },
   "featuresection": "Fonctionnalités",
   "faqsection": "FAQ",
   "aboutUssection": "À propos de nous",
